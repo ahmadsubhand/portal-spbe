@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 use App\Models\User;
@@ -16,20 +15,20 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         User::updateOrCreate(
-            ['email' => 'admin@spbe.test'],
+            ['email' => env('SEED_ADMIN_EMAIL', 'admin@spbe.test')],
             [
                 'name' => 'Admin SPBE',
-                'password' => Hash::make('password'),
+                'password' => Hash::make(env('SEED_ADMIN_PASSWORD', 'password')),
                 'role' => 'admin',
                 'is_active' => true,
             ]
         );
 
         User::updateOrCreate(
-            ['email' => 'asn@spbe.test'],
+            ['email' => env('SEED_ASN_EMAIL', 'asn@spbe.test')],
             [
                 'name' => 'ASN SPBE',
-                'password' => Hash::make('password'),
+                'password' => Hash::make(env('SEED_ASN_PASSWORD', 'password')),
                 'role' => 'asn',
                 'is_active' => true,
             ]
