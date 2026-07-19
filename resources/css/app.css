@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --portal-primary: #117edb;
+        --portal-secondary: #356dd8;
+        --portal-accent-dark: #335f9d;
+        --portal-surface-soft: #dcebff;
+        --portal-primary-deep: #0b4f96;
+        --portal-ink: #1c2840;
+        --portal-bg: #f2f7ff;
+        --portal-card-tint: #c9deff;
+    }
+
+    html {
+        font-size: 16.5px;
+    }
+
+    body {
+        color: var(--portal-ink);
+    }
+
+    .ql-editor img,
+    .prose img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@layer components {
+    .prose > * + * {
+        margin-top: 0.85rem;
+    }
+
+    .prose p + p {
+        margin-top: 0.55rem;
+    }
+
+    .prose h1,
+    .prose h2,
+    .prose h3,
+    .prose h4 {
+        margin-top: 1.75rem;
+        font-weight: 800;
+        line-height: 1.25;
+        color: #0f172a;
+    }
+
+    .prose h2 { font-size: 1.75rem; }
+    .prose h3 { font-size: 1.4rem; }
+    .prose h4 { font-size: 1.15rem; }
+
+    .prose ul,
+    .prose ol {
+        padding-left: 1.5rem;
+    }
+
+    .prose ul { list-style-type: disc; }
+    .prose ol { list-style-type: decimal; }
+    .prose li + li { margin-top: 0.4rem; }
+
+    .prose blockquote {
+        border-left: 4px solid #38bdf8;
+        border-radius: 0 0.75rem 0.75rem 0;
+        background: #f0f9ff;
+        padding: 1rem 1.25rem;
+        color: #334155;
+        font-style: italic;
+    }
+
+    .prose iframe {
+        aspect-ratio: 16 / 9;
+        width: min(100%, 48rem);
+        height: auto;
+        border-radius: 1rem;
+    }
+}
