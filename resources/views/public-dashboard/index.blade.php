@@ -12,7 +12,15 @@
 
                 @if ($embedUrl)
                     <div class="mt-8 overflow-hidden rounded-2xl border border-slate-200">
-                        <iframe src="{{ $embedUrl }}" class="h-[720px] w-full bg-slate-50" loading="lazy"></iframe>
+                        <iframe 
+                            src="{{ $embedUrl }}" 
+                            class="h-[720px] w-full bg-slate-50" 
+                            loading="lazy"
+                            frameborder="0" 
+                            style="border:0" 
+                            allowfullscreen 
+                            sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+                        </iframe>
                     </div>
                 @else
                     <div class="mt-8 rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-10 text-center text-sm text-slate-500">

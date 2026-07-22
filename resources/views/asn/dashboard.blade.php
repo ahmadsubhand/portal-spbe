@@ -15,25 +15,6 @@
         @endforeach
     </div>
 
-    <!-- Blok Google Data Studio / Looker Studio -->
-    <div class="mt-6 rounded-2xl border border-slate-200 p-5">
-        <div class="mb-4">
-            <h2 class="font-extrabold text-slate-950">Analitik Laporan</h2>
-            <p class="mt-1 text-xs text-slate-500">Data dan performa dari Google Looker Studio.</p>
-        </div>
-        <div class="w-full overflow-hidden rounded-xl border border-slate-100 bg-slate-50">
-            <iframe 
-                src="https://lookerstudio.google.com/embed/reporting/5ec6423e-e27f-43b8-a3b6-7c79e7917ee1/page/X94cD" 
-                class="w-full" 
-                style="min-height: 650px;" 
-                frameborder="0" 
-                style="border:0" 
-                allowfullscreen 
-                sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
-            </iframe>
-        </div>
-    </div>
-
     <!-- Blok Artikel Terbaru & Diskusi -->
     <div class="mt-6 grid gap-6 xl:grid-cols-[1.35fr_.85fr]">
         <section class="rounded-2xl border border-slate-200 p-5">
