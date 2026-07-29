@@ -33,5 +33,31 @@ class UserSeeder extends Seeder
                 'is_active' => true,
             ]
         );
+
+        // 5 Admin tambahan
+        foreach (range(1, 5) as $i) {
+            User::updateOrCreate(
+                ['email' => "admin{$i}@spbe.test"],
+                [
+                    'name' => "Admin SPBE {$i}",
+                    'password' => Hash::make(env('SEED_ADMIN_PASSWORD', 'password')),
+                    'role' => 'admin',
+                    'is_active' => true,
+                ]
+            );
+        }
+
+        // 5 ASN tambahan
+        foreach (range(1, 5) as $i) {
+            User::updateOrCreate(
+                ['email' => "asn{$i}@spbe.test"],
+                [
+                    'name' => "ASN SPBE {$i}",
+                    'password' => Hash::make(env('SEED_ASN_PASSWORD', 'password')),
+                    'role' => 'asn',
+                    'is_active' => true,
+                ]
+            );
+        }
     }
 }

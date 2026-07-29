@@ -58,14 +58,16 @@ class ForumTableSeeder extends Seeder
         ];
 
         foreach ($topics as $t) {
-            Topic::create([
-                'user_id' => $userId,
-                'title' => $t['title'],
-                'slug' => Str::slug($t['title']),
-                'content' => $t['content'],
-                'category' => $t['category'],
-                'views_count' => $t['views_count']
-            ]);
+            Topic::updateOrCreate(
+                ['slug' => Str::slug($t['title'])],
+                [
+                    'user_id' => $userId,
+                    'title' => $t['title'],
+                    'content' => $t['content'],
+                    'category' => $t['category'],
+                    'views_count' => $t['views_count']
+                ]
+            );
         }
     }
 }
