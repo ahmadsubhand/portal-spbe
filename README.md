@@ -173,7 +173,7 @@ Follow these steps to set up the project locally:
 ![Taxonomy Management](./assets/screenshots/taxonomy.png)
 
 7. User Management
-![User Management](./assets/screenshots/taxonomy.png)
+![User Management](./assets/screenshots/user.png)
 
 8. Audit Trail Logs
 ![Audit Trail Logs](./assets/screenshots/audit.png)
